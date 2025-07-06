@@ -6,6 +6,12 @@
 <img src= "Chatbot_AI_Agent.png">
 <ol>
   <li><strong>Initial User Interaction:</strong></li>
+  <ul>
+    <li>User accesses website through CloudFront</li>
+    <li>CloudFront serves static website from S3 (HTML, CSS, JS files)</li>
+    <li>Cognito handles user authentication/permissions and provide necessary AWS credentials</li>
+    <li>Frontend sends query to Lex through authenticated connection</li>
+  </ul>
   <li><strong>Lex Intent Check:</strong></li>
   <li><strong>Lambda Initial Processing:</strong></li>
   <li><strong>Kendra Search:</strong></li>
