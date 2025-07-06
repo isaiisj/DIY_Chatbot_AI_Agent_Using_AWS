@@ -13,9 +13,36 @@
     <li>Frontend sends query to Lex through authenticated connection</li>
   </ul>
   <li><strong>Lex Intent Check:</strong></li>
+  <ul>
+    <li>Lex analyzes query to identify intent</li>
+    <li>Determines what kind of information user is seeking</li>
+    <li>If Lex has matching intent → provides direct response</li>
+    <li>If no matching intent → forwards to Lambda function</li>
+  </ul>
   <li><strong>Lambda Initial Processing:</strong></li>
+  <ul>
+    <li>ConversationalRetrievalChain used</li>
+    <li>Calls Bedrock (first LLM) to formulate search prompt</li>
+    <li>Uses conversation history</li>
+  </ul>
   <li><strong>Kendra Search:</strong></li>
+  <ul>
+    <li>Lambda sends prompt to Kendra retrieve API</li>
+    <li>Kendra searches through documents in S3</li>
+    <li>Kendra returns relevant context passages</li>
+  </ul>
   <li><strong>Response Generation:</strong></li>
+  <ul>
+    <li>Lambda sends prompt + Kendra context to Bedrock (second LLM)</li>
+    <li>Bedrock uses search results to generate natural response</li>
+    <li>Different LLM used for response generation</li>
+    <li>Optimized for cost/performance</li>
+  </ul>
   <li><strong>Response Delivery</strong></li>
+  <ul>
+    <li>Lambda sends response back to Lex</li>
+    <li>Lex stores conversation history in session</li>
+    <li>Response displayed to user through frontend</li>
+  </ul>
 </ol>
 <img src="Congnito_user_access.png">
