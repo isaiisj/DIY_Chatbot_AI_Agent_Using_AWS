@@ -277,5 +277,5 @@ def format_lex_response(response_text, intent_name, session_attributes):
 <img src="Congnito_user_access.png">
 
 <h3>Demo</h3>
-<img src="phoenix.png">
+<img src="phoneix.png">
 
