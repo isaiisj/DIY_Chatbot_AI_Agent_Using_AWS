@@ -51,7 +51,7 @@
 <img src="FlowDiagram.png">
 
 <h3>Lambda code</h3>
-<code>
+<pre>
   import json
 import boto3
 import os
@@ -265,7 +265,7 @@ def format_lex_response(response_text, intent_name, session_attributes):
             }
         ]
     }
-</code>
+</pre>
 
 <h3>Data sources</h3>
 <a href="https://docs.aws.amazon.com/">AWS Docs</a>
