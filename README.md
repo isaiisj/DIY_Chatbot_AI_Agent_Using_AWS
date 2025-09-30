@@ -48,3 +48,4 @@
 <img src="Congnito_user_access.png">
 <h2>AWS Lambda</h2>
 <h3>Flow diagram of lambda code</h3>
+<img src="FlowDiagram.png">
