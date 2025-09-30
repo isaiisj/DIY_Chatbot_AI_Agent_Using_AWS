@@ -51,7 +51,7 @@
 <img src="FlowDiagram.png">
 
 <h3>Lambda code</h3>
-<p>Click <a href="">here</a> to see the code</p>
+<p>Click <a href="https://github.com/isaiisj/DIY_Chatbot_AI_Agent_Using_AWS/blob/main/Lambda_code/handler.py">here</a> to see the code</p>
 
 <h3>Data sources</h3>
 <a href="https://docs.aws.amazon.com/">AWS Docs</a>
