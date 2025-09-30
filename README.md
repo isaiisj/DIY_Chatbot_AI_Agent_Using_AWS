@@ -52,9 +52,15 @@
 
 <h3>Lambda code</h3>
 
+<h3>Data sources</h3>
+<a href="https://docs.aws.amazon.com/">AWS Docs</a>
+
 <h3>User access</h3>
 <p>Amazon Cognito serves as the authentication and authorization backbone for web applications distributed through CloudFront. In our implementation, we're utilizing Cognito's Identity Pools to manage unauthenticated (guest) access, which provides temporary AWS credentials to users accessing the chatbot interface through CloudFront's secure content delivery network.</p>
 <p>The security flow begins when a user accesses the website through CloudFront, which serves the static content securely via HTTPS. Behind the scenes, Cognito's Identity Pool issues temporary AWS credentials, allowing the frontend application to interact with AWS services (specifically Lex in our case) through IAM roles that define precise permissions for unauthenticated users.</p>
 <p>This architecture ensures secure and scalable access management while maintaining simplicity for public chatbot access. The combination of CloudFront's secure content delivery and Cognito's identity management creates a robust system where users can interact with AWS services safely, without requiring authentication, while still maintaining control over resource access through IAM policies.</p>
 <img src="Congnito_user_access.png">
+
+<h3>Demo</h3>
+<img src="">
 
